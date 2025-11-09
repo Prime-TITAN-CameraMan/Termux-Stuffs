@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# cowsay - Termux-compatible cowsay clone
+
+MESSAGE="$*"
+LENGTH=${#MESSAGE}
+
+# Build top line of underscores
+TOP_LINE=" "
+for ((i=0; i<LENGTH; i++)); do
+  TOP_LINE="${TOP_LINE}_"
+done
+echo "$TOP_LINE"
+
+# Print message line
+echo "< $MESSAGE >"
+
+# Build bottom line of dashes
+BOTTOM_LINE=" "
+for ((i=0; i<LENGTH; i++)); do
+  BOTTOM_LINE="${BOTTOM_LINE}-"
+done
+echo "$BOTTOM_LINE"
+
+# ASCII cow
+cat << "EOF"
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+EOF

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [[ -n "$1" && -n "$2" ]]; then
+  driver="$1"
+  shift
+  export GALLIUM_DRIVER="$driver"
+  export MESA_LOADER_DRIVER_OVERRIDE="$driver"
+  "$@"
+else
+  echo "Usage: thaihwa <driver> <command> [args...]"
+  echo
+  echo "Example:"
+  echo "  thaihwa zink chromium --no-sandbox"
+fi
