@@ -18,6 +18,7 @@ pkg upgrade -y
 pkg install -y wget > /dev/null 2>&1
 cd ~
 wget -O termux-fastest-repo https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/termux-fastest-repo > /dev/null 2>&1
+chmod +x termux-fastest-repo
 ./termux-fastest-repo
 echo -e "${BOLD_GREEN}Done Succesfully...${RESET}"
 sleep 2
