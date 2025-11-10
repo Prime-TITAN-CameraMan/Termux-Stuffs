@@ -358,3 +358,7 @@ while true; do
       
   esac
 done
+
+rm -rf /data/data/com.termux/files/home/termux-desktop-installation.sh
+
+echo -e "${BOLD_CYAN}Congratulations${RESET}"
