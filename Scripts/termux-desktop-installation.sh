@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Logging Configuration
-LOGFILE="script_$(date '+%Y-%m-%d_%H-%M-%S').log"
-
-# Redirect all outputs
-exec > >(tee -a "$LOGFILE") 2>&1
-
 # Colour Definitions
 BOLD_RED="\e[1;31m"
 BOLD_YELLOW="\e[1;33m"
@@ -20,6 +14,7 @@ clear
 echo -e "${BOLD_YELLOW}Setting up few things...\nWill ask for user inputs!${RESET}"
 sleep 2
 pkg update > /dev/null 2>&1
+pkg upgrade -y
 pkg install -y wget > /dev/null 2>&1
 cd ~
 wget -O termux-fastest-repo https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/termux-fastest-repo > /dev/null 2>&1
@@ -53,7 +48,7 @@ echo -e "${BOLD_YELLOW}Setting up Termux API Permissions...${RESET}"
 clear
 echo -e "${BOLD_RED}Give Microphone Permission to Termux API${RESET}"
 sleep 1
-termux-microphone-record -d 5
+termux-microphone-record -d 4
 clear
 
 echo -e "${BOLD_YELLOW}If you want to get other permissions on desktop then give it manually to Termux API app${RESET}"
