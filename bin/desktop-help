@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+# Colour Definitions
+BOLD_RED="\e[1;31m"
+BOLD_YELLOW="\e[1;33m"
+BOLD_CYAN="\e[1;36m"
+BOLD_GREEN="\e[1;32m"
+RESET="\e[0m"
+
+echo -e "                      ${BOLD_CYAN}Termux Desktop Help${RESET}"
+echo
+
+echo "---------------"
+
+echo -e "For running the desktop, use ${BOLD_CYAN}termux-xfce4${RESET}"
+echo -e "This launches the full XFCE4 Desktop Environment."
+echo
+echo "---------------"
+
+echo -e "For fixing slow download speeds, run ${BOLD_CYAN}termux-fastest-repo${RESET}"
+echo -e "This switches Termux repositories to the fastest mirror available."
+echo
+echo "---------------"
+
+echo -e "To launch an app with a different hardware-acceleration driver, use:"
+echo -e "  ${BOLD_CYAN}apphwa drivername appname${RESET}"
+echo -e "Example:"
+echo -e "  ${BOLD_CYAN}apphwa llvmpipe glmark2${RESET}"
+echo
+echo -e "${BOLD_RED}Important: Execute hardware-acceleration commands inside the desktop terminal.${RESET}"
+echo
+echo "---------------"
+
+echo -e "To run PRoot apps on the native desktop, use:"
+echo -e "  ${BOLD_CYAN}proot_program appname optional-args${RESET}"
+echo -e "Examples:"
+echo -e "  ${BOLD_CYAN}proot_program vesktop --no-sandbox${RESET}"
+echo -e "  ${BOLD_CYAN}proot_program firefox${RESET}"
+echo
+echo -e "${BOLD_RED}Important: Must run on desktop terminal.${RESET}"
+echo
+echo "---------------"
+
+echo -e "To clean temporary files and free storage daily, run:"
+echo -e "  ${BOLD_CYAN}native_cleaner${RESET}"
+echo
+echo -e "${BOLD_RED}Important: Run native_cleaner only after closing the desktop and all running processes.${RESET}"
+echo
+echo "---------------"
