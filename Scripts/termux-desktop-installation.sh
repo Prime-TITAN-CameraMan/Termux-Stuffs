@@ -244,6 +244,7 @@ wget -O proot_program https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Te
 wget -O startgui_env https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/startgui_env
 wget -O termux-fastest-repo https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/termux-fastest-repo
 wget -O termux-xfce4 https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/termux-xfce4
+wget -O desktop-help https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/desktop-help
 
 chmod +x apphwa
 chmod +x cowsay
@@ -252,6 +253,7 @@ chmod +x proot_program
 chmod +x startgui_env
 chmod +x termux-fastest-repo
 chmod +x termux-xfce4
+chmod +x desktop-help
 cd ~
 echo -e "${BOLD_GREEN}Done Succesfully...${RESET}"
 sleep 2
@@ -361,4 +363,6 @@ done
 
 rm -rf /data/data/com.termux/files/home/termux-desktop-installation.sh
 
-echo -e "${BOLD_CYAN}Congratulations${RESET}"
+echo -e "${BOLD_CYAN}Congratulations, it's done. Now kill & restart your Termux${RESET}"
+
+echo -e "${BOLD_CYAN}Run \"desktop-help\" to know all of the necessary commands to operate the desktop${RESET}"
