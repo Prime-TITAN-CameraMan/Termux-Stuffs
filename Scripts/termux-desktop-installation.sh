@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 
 # Colour Definitions
 BOLD_RED="\e[1;31m"
@@ -56,20 +56,12 @@ echo -e "${BOLD_YELLOW}If you want to get other permissions on desktop then give
 sleep 2
 clear
 
-echo -e "${BOLD_YELLOW}Installing & Configuring HWA... (only for Vulkan-supported devices)${RESET}"
-cd ~
-mkdir Temp-HWA
-cd ~/Temp-HWA
-wget -O mesa-zink_23.0.4-5_aarch64.deb https://github.com/Prime-TITAN-CameraMan/Termux-Stuffs/raw/refs/heads/main/Packages/mesa-zink/mesa-zink_23.0.4-5_aarch64.deb
-wget -O mesa-zink-dev_23.0.4-5_all.deb https://github.com/Prime-TITAN-CameraMan/Termux-Stuffs/raw/refs/heads/main/Packages/mesa-zink-dev/mesa-zink-dev_23.0.4-5_all.deb
-apt install -y ./*.deb
-apt install -y virglrenderer-mesa-zink vulkan-loader-generic angle-android virglrenderer-android libandroid-shmem libc++ libdrm libx11 libxcb libxshmfence libwayland zlib zstd
-wget -O vulkan-icd.deb https://github.com/Prime-TITAN-CameraMan/Termux-Stuffs/releases/download/25.0.0-2/vulkan-wrapper-android_25.0.0-2_aarch64.deb
-apt install -y ./vulkan-icd.deb
-cd ~
-rm -rf Temp-HWA
-pkg install -y glmark2
-pkg install -y vkmark
+echo -e "${BOLD_YELLOW}Installing WaifuDownloader (exclusive)${RESET}"
+sleep 2
+pip install requests
+wget -O waifudownloader_0.2.10_aarch64.deb https://github.com/Prime-TITAN-CameraMan/Termux-Stuffs/releases/download/0.2.10/waifudownloader_0.2.10_aarch64.deb
+apt install -y ./waifudownloader_0.2.10_aarch64.deb
+apt -y --fix-broken install
 echo -e "${BOLD_GREEN}Done Succesfully...${RESET}"
 sleep 2
 clear
@@ -240,10 +232,10 @@ cd ~/bin
 wget -O apphwa https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/apphwa
 wget -O cowsay https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/cowsay
 wget -O native_cleaner https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/native_cleaner
-wget -O proot_program https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/proot_program
+wget -O proot_program https://gist.githubusercontent.com/Prime-TITAN-CameraMan/7018043c8313a3618e3cffd657a67960/raw/3901f306350af7ec36b95b4a4ae6ebb5b059738c/proot_program
 wget -O startgui_env https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/startgui_env
 wget -O termux-fastest-repo https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/termux-fastest-repo
-wget -O termux-xfce4 https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/termux-xfce4
+wget -O termux-xfce4 https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/termux-xfce4-cpu
 wget -O desktop-help https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Stuffs/refs/heads/main/bin/desktop-help
 
 chmod +x apphwa
