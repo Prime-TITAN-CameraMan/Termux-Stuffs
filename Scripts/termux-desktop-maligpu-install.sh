@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 
 # Colour Definitions
 BOLD_RED="\e[1;31m"
